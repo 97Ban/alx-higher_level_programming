@@ -1,4 +1,7 @@
 #!/usr/bin/python3
-for x in range(122, 96, -2):
-    y = x - 33
-    print("{}{}".format(chr(x), chr(y)), end="")
+# 11-pow.py
+
+
+def pow(a, b):
+    """Return a to the power of b."""
+    return (a ** b)
