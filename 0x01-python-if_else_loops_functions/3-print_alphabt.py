@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-for ch in range(97, 123):
-    if ch == 101 or ch == 113:
-        continue
-    print("{:c}".format(ch), end="")
+for x in range(97, 123):
+    if x == 101 or x == 113:
+        pass
+    else:
+        char_x = chr(x)
+        print("{}".format(char_x), end="")
