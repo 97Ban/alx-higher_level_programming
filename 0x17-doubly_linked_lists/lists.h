@@ -1,23 +1,27 @@
-#ifndef ALX_LISTS_H
-#define ALX_LISTS_H
-#include <stdlib.h>
+#ifndef LISTS_H
+#define LISTS_H
+
+/*
+ * File: lists.h
+ * Auth: Bamidele Adefolaju
+ */
+
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * struct dlistint_s - Represents a doubly linked list
- * @n: The data stored in a node
- * @prev: The pointer to the previous node
- * @next: The pointer to the next node
+ * struct dlistint_s - doubly linked list
+ * @n: integer
+ * @prev: points to the previous node
+ * @next: points to the next node
  *
- * Description: A doubly linked list node structure
+ * Description: doubly linked list node structure
+ * for Holberton project
  */
 typedef struct dlistint_s
 {
-	/* The data stored in a node */
 	int n;
-	/* The pointer to the previous node */
 	struct dlistint_s *prev;
-	/* The pointer to the next node */
 	struct dlistint_s *next;
 } dlistint_t;
 
@@ -31,4 +35,4 @@ int sum_dlistint(dlistint_t *head);
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 
-#endif
+#endif /* LISTS_H */
