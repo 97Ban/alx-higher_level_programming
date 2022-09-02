@@ -1,22 +1,17 @@
 #!/usr/bin/python3
-def search_replace(my_list, search, replace):
+def uniq_add(my_list=[]):
     """
-    Replaces all occurrences of an element by another in a new list
+    Adds all unique integers in a list (only once for each integer)
     ...
     Parameters
     ----------
     my_list : list
-        Initial list of elements
-    search : integer
-        The element to replace in the list
-    replace : integer
-        The new element
+        List of elements
     Return:
-        a new list with the new elements
+        the result of the addition
     """
 
-    new_list = my_list[:]
-    for i in range(len(new_list)):
-        if new_list[i] == search:
-            new_list[i] = replace
-    return (new_list)
+    result = 0
+    for x in set(my_list):
+        result += x
+    return (result)
