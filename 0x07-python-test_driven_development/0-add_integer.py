@@ -1,19 +1,21 @@
 #!/usr/bin/python3
 """
-This is the module  0-add_integer.py
+Function that adds two integers.
 """
 
 
 def add_integer(a, b=98):
     """
-    Function that adds 2 integers
+    Function that checks for type errors and
+    returns the addition of two cast integers.
     """
-    if isinstance(a, float):
-        a = int(a)
-    if isinstance(b, float):
-        b = int(b)
-    if not isinstance(a, int):
+    if isinstance(a, bool):
         raise TypeError("a must be an integer")
-    if not isinstance(b, int):
+    if isinstance(b, bool):
         raise TypeError("b must be an integer")
-    return a + b
+    if not isinstance(a, (float, int)):
+        raise TypeError("a must be an integer")
+    if not isinstance(b, (float, int)):
+        raise TypeError("b must be an integer")
+
+    return int(a) + int(b)
